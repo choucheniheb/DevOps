@@ -20,6 +20,7 @@ public class Reservation {
     @Id
     String idReservation;
 
+    //test
 
     Date anneeUniversitaire;
     boolean estValide;
