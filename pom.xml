@@ -90,7 +90,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <!-- Préparation de l'agent JaCoCo pour enregistrer la couverture -->
+                            <!-- Préparation de l'agent JaCoCoo pour enregistrer la couverture -->
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
