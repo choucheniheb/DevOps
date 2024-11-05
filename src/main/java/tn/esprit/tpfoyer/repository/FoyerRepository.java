@@ -12,7 +12,7 @@ public interface FoyerRepository extends JpaRepository<Foyer, Long>
     interfaces provided by the framework Spring Data JPA :
        - CrudRepository or
        - PagingAndSoringRepository or
-       - JpaRepository
+       -  JpaRepository
      */
 
     /* Keywords : */

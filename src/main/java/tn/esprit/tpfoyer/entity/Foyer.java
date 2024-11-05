@@ -17,7 +17,7 @@ import java.util.Set;
 public class Foyer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy  = GenerationType.IDENTITY)
     Long idFoyer;
 
     String nomFoyer;
