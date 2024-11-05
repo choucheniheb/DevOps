@@ -3,7 +3,7 @@ version: "3.8"
 services:
   mysqldb:
     image: mysql:8.0.30
-    restart: always
+    restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=Asma123456@
       - MYSQL_DATABASE=foyer_db
