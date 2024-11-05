@@ -82,6 +82,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>3.3.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>run</goal> <!-- Spécifiez le goal -->
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <excludes>
                         <exclude>
