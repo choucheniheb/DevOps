@@ -26,6 +26,7 @@ public class Bloc {
     long capaciteBloc;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "foyer_id_foyer", nullable = true)
     Foyer foyer;
 
     @OneToMany(mappedBy = "bloc")

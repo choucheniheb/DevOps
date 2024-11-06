@@ -19,5 +19,5 @@ public interface IBlocService {
     public List<Bloc> trouverBlocsParNomEtCap(String nb, long c);
 
 
-
-    }
+    void setFoyerNullForBloc(Long blocId);
+}

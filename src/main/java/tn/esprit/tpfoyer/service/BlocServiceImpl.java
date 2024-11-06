@@ -77,5 +77,19 @@ public class BlocServiceImpl  implements IBlocService {
     public List<Bloc> trouverBlocsParNomEtCap(String nb, long c) {
         return blocRepository.findAllByNomBlocAndCapaciteBloc(nb,  c);
     }
+    // Nouvelle méthode ajoutée pour dissocier un bloc d'un foyer
+    @Transactional
+    public void setFoyerNullForBloc(Long blocId) {
+        // Récupérer le bloc par son ID
+        Bloc bloc = blocRepository.findById(blocId)
+                .orElseThrow(() -> new RuntimeException("Bloc not found"));
+
+        // Supprimer l'association en mettant le foyer à null
+        bloc.setFoyer(null);  // Enlever la référence au foyer
+
+        // Sauvegarder la mise à jour dans la base de données
+        blocRepository.save(bloc);
+    }
+
 
 }

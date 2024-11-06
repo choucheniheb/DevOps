@@ -71,5 +71,12 @@ public class BlocRestController {
         return blocService.trouverBlocsParNomEtCap(nb, c);
 
     }
+    // Nouvelle méthode pour dissocier un bloc de son foyer
+    // Exemple : http://localhost:8089/tpfoyer/bloc/remove-foyer/{bloc-id}
+    @PutMapping("/remove-foyer/{bloc-id}")
+    @Operation(description = "Dissocier un bloc de son foyer")
+    public void removeFoyerFromBloc(@PathVariable("bloc-id") Long blocId) {
+        blocService.setFoyerNullForBloc(blocId);
+    }
 
 }
