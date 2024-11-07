@@ -21,8 +21,9 @@ public class Bloc {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long idBloc;
-
+    @Column(name = "nom_bloc")
     String nomBloc;
+    @Column(name = "capacite_bloc")
     long capaciteBloc;
 
     @ManyToOne(cascade = CascadeType.ALL)
