@@ -30,18 +30,10 @@ public class FoyerRestController {
     // http://localhost:8090/tpfoyer/foyer/add-foyer
     @PostMapping("/add-foyer")
     public Foyer addFoyer(@RequestBody Foyer f) {
-        // Vérification du nom du foyer avant de continuer
-        if (f.getNomFoyer() == null || f.getNomFoyer().isEmpty()) {
-            throw new IllegalArgumentException("Le nom du foyer est requis");
-        }
-
-        // Appeler le service pour ajouter le foyer
         Foyer foyer = foyerService.addFoyer(f);
-
-        // Retourner le foyer ajouté
         return foyer;
-    }
 
+    }
 
     // http://localhost:8090/tpfoyer/foyer/remove-foyer/{foyer-id}
     @DeleteMapping("/remove-foyer/{foyer-id}")
