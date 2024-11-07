@@ -19,7 +19,7 @@ public class Foyer {
     @Id
     @GeneratedValue(strategy  = GenerationType.IDENTITY)
     Long idFoyer;
-
+    @Column(name = "nom_foyer")
     String nomFoyer;
     long capaciteFoyer;
 
