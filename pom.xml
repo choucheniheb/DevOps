@@ -47,7 +47,12 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.1.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.0.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -88,8 +93,9 @@
                 <executions>
                     <execution>
                         <goals>
-                            <goal>run</goal> <!-- Spécifiez le goal -->
+                            <goal>run</goal> <!-- Lancer l'application Spring -->
                         </goals>
+                        <phase>install</phase> <!-- Assurez-vous que le plugin est lancé après la compilation -->
                     </execution>
                 </executions>
                 <configuration>
@@ -101,6 +107,7 @@
                     </excludes>
                 </configuration>
             </plugin>
+
             <!-- Plugin JaCoCo -->
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -145,7 +152,7 @@
         <repository>
             <id>deploymentRepo</id>
             <name>Nexus Repository</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <url>http://localhost:8089/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
